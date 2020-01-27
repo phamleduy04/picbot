@@ -1,0 +1,19 @@
+{
+  "name": "picbot",
+  "version": "1.0.0",
+  "description": "Export boys and girls pics ",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "get-json": "^1.0.1",
+    "ksoft.js": "^3.1.4",
+    "ms": "^2.1.2",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Duy Pham",
+  "license": "ISC"
+}
