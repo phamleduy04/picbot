@@ -5,7 +5,7 @@ const client = new Discord.Client()
 const url_girl = 'https://api.vitamingirl.asia/api/images/1/'
 const { ksoft_key } = require('./keys.json')
 const { KSoftClient } = require('ksoft.js');
-const trai_random_subreddit = ["cuteguys", "LadyBoners","HotGuys"];
+const trai_random_subreddit = ["cuteguys", "LadyBoners","HotGuys","gaysiansgonemild","AsianLadyboners"];
 const ksoft = new KSoftClient(ksoft_key);
 const {discord_token} = require('./keys.json');
 
@@ -51,7 +51,7 @@ client.on('message', msg => {
         msg.channel.send(`Đã kích hoạt, mỗi 30p tự động gởi hình.`)
         async function main() {
             const sub_reddit = trai_random_subreddit[Math.floor(Math.random()*trai_random_subreddit.length)];
-            const res = await ksoft.images.reddit(sub_reddit, { removeNSFW: false, span: 'all' });;
+            const res = await ksoft.images.reddit(sub_reddit, { removeNSFW: true, span: 'all' });;
             const embed = new Discord.RichEmbed()
                 .setTitle(`From ${res.post.subreddit}`)
                 .setURL(res.url)
@@ -67,7 +67,7 @@ client.on('message', msg => {
     if (msg.content === "traixinhnow" && msg.author.id == "455935236262592512"){
         async function traixinhnow() {
             const sub_reddit = trai_random_subreddit[Math.floor(Math.random()*trai_random_subreddit.length)];
-            const res = await ksoft.images.reddit(sub_reddit, { removeNSFW: false, span: 'all' });;
+            const res = await ksoft.images.reddit(sub_reddit, { removeNSFW: true, span: 'all' });;
             const embed = new Discord.RichEmbed()
                 .setTitle(`From ${res.post.subreddit}`)
                 .setURL(res.url)
